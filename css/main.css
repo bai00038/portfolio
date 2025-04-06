@@ -1,11 +1,17 @@
 :root {
     --bs-secondary-rgb: rgb(54, 54, 54);
+    --bs-disabled-rgb: rgb(153, 153, 153);
     --bs-btn-bg-rgb: rgb(54, 54, 54);
-    --bs-btn-border-color: rgb(54, 54, 54);
+    --bs-btn-border-color-rgb: rgb(54, 54, 54);
     --bs-border-color: #dee2e6;
-    --bs-btn-hover-bg: #454545;
+    --bs-btn-hover-bg-rgb: rgb(75, 75, 75);
     --Dark-Dark-1: #363636;
     --Dark-Dark-2: rgba(54, 54, 54, 0.85);
+    --Dark-Dark-3: rgba(54, 54, 54, 0.65);
+    --Dark-Dark-4: rgba(54, 54, 54, 0.45);
+    --Dark-Dark-5: rgba(54, 54, 54, 0.25);
+    --Dark-Dark-6: rgba(54, 54, 54, 0.15);
+    --Dark-Dark-7: rgba(54, 54, 54, 0.08);
     --General-Background: #F5F7F9;
 }
 
@@ -37,9 +43,11 @@ header {
     background-color: var(--General-Background);
     z-index: 2;
 }
+
 header a {
     font-family: "Roboto Condensed", sans-serif;
 }
+
 .hamburger {
     display: flex;
     align-items: center;
@@ -66,7 +74,14 @@ header a {
 
 .btn-primary {
     background-color: var(--bs-btn-bg-rgb);
-    border-color: var(--bs-btn-border-color);
+    border-color: var(--bs-btn-border-color-rgb);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: var(--bs-btn-hover-bg-rgb) !important;
+    border-color: var(--bs-btn-hover-bg-rgb) !important;
 }
 
 /* banner */
@@ -88,7 +103,21 @@ header a {
 }
 
 .arrow_container img {
-    width: 1rem;
+    width: 1.5rem;
+    padding-bottom: 2rem;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 /* what I do */
@@ -142,6 +171,35 @@ header a {
     box-sizing: border-box;
 }
 
+.project_item {
+    position: relative;
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.project_item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bs-secondary-color);
+    transition: transform 0.4s ease;
+}
+
+.project_item:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.project_item:hover .tag_item {
+    color: var(--bs-secondary-color);
+    transition: color 0.5s ease-out;
+    border-color: var(--bs-secondary-color);
+}
+
+
 .project_item h3 {
     letter-spacing: 0.8px;
 }
@@ -187,11 +245,26 @@ header a {
 }
 
 .btn_link {
-    display: flex;
-    justify-content: start;
-    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: auto;
-    text-decoration-style: none;
+    text-decoration: none;
+}
+
+/* arrow icon styles */
+.btn_link img {
+    transition: 0.3s ease, transform 0.3s ease;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0.2rem;
+}
+
+.btn_link:hover img {
+    background-color: var(--Dark-Dark-4) !important;
+    transform: scale(1.1);
+    border: 2px solid var(--bs-secondary-color);
 }
 
 /* FAQ */
@@ -199,7 +272,6 @@ header a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .FAQ_container h4 {
@@ -207,8 +279,33 @@ header a {
     letter-spacing: 0.8px;
 }
 
-/* works */
+.FAQ_container .decoration_img {
+    width: 3rem;
+}
+
+/* -------- works -------- */
 /* project list */
+.general_list {
+    position: relative;
+}
+
+.general_list::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bs-secondary-color);
+    transition: transform 0.4s ease;
+}
+
+.general_list:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
 .general_list .tag {
     display: none;
 }
@@ -219,7 +316,23 @@ header a {
 
 .general_list h2 {
     font-size: 1.5rem;
-    letter-spacing: 1.92px;
+    letter-spacing: 1.5px;
+    color: var(--Dark-Dark-2);
+}
+
+.general_list:hover h2 {
+    color: var(--Dark-Dark-1);
+}
+
+.general_list:hover .tag_item {
+    color: var(--bs-secondary-color);
+    background-color: var(--Dark-Dark-6);
+    border-color: var(--bs-secondary-color);
+    transition: all 0.3s ease;
+}
+
+.project_cover_hover {
+    display: none;
 }
 
 /* about */
@@ -229,10 +342,12 @@ header a {
     flex-direction: row;
     align-items: center;
 }
+
 /* skills */
 .skills_content .content_1 {
     border-bottom: 1px solid var(--bs-border-color);
 }
+
 .skills .title img,
 .design_philosophy img {
     width: 4rem;
@@ -281,9 +396,11 @@ header a {
     display: flex;
     flex-direction: column;
 }
+
 .message_linkedIn a {
     width: 8rem;
 }
+
 .contact_content .get_in_touch {
     margin-top: 1rem;
     margin-right: 2rem;
@@ -292,13 +409,15 @@ header a {
     flex-grow: 1;
     flex-shrink: 1;
 }
+
 .contact_content .say_hello {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 1rem;
 }
+
 .form input,
-.form textarea{
+.form textarea {
     border: none;
     border-radius: 0;
     background-color: transparent;
@@ -306,12 +425,37 @@ header a {
     padding-left: 0;
 }
 
+.form textarea {
+    border-right: 1px solid var(--bs-border-color);
+}
+
 .form input:focus,
 .form textarea:focus {
     outline: none;
-  box-shadow: none;
-  background-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
     border-bottom: 2px solid #363636;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--bs-disabled-rgb);
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+    color: var(--bs-disabled-rgb);
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+    color: var(--bs-disabled-rgb);
+    opacity: 0.6;
+    font-weight: 300;
 }
 
 /* -------- footer--------  */
@@ -391,7 +535,7 @@ header a {
     }
 
     .FAQ_container img {
-        width: 40px;
+        width: 3rem;
     }
 
     /* ---------- about ----------  */
@@ -401,6 +545,7 @@ header a {
         align-items: start;
         position: relative;
     }
+
     .resume_btn {
         position: absolute;
         bottom: 0;
@@ -409,6 +554,7 @@ header a {
         width: auto;
         max-width: fit-content;
     }
+
     /* skills */
     .skills {
         display: flex;
@@ -431,10 +577,12 @@ header a {
         border-right: 1px solid var(--bs-border-color);
         border-bottom: none;
     }
-/* -------- contact -------- */
+
+    /* -------- contact -------- */
     .contact_content .get_in_touch {
         margin-left: 2rem;
     }
+
     .contact_content .say_hello {
         margin-left: 2rem;
     }
@@ -481,7 +629,7 @@ header a {
 
     .arrow_container img {
         width: 1.5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     /* what I do */
@@ -558,7 +706,7 @@ header a {
         font-size: 1.5rem;
     }
 
-    /* works */
+    /* -------- works -------- */
     /* project list */
     .general_list .tag {
         display: flex;
@@ -568,6 +716,35 @@ header a {
         margin-right: 0;
     }
 
+    .project_item:hover .tag_item {
+        color: var(--bs-secondary-color);
+        background-color: var(--Dark-Dark-6);
+        border-color: var(--bs-secondary-color);
+        transition: all 0.3s ease;
+    }
+
+    /* Added project cover hover styles */
+    .project_cover_hover {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 20rem;
+        transform: translateY(-50%);
+        width: 240px;
+        height: auto;
+        border-radius: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .general_list {
+        position: relative;
+    }
+
+    .general_list:hover .project_cover_hover {
+        display: block;
+    }
+
     /* ---------- about ----------  */
     .banner_content {
         display: flex;
@@ -575,6 +752,7 @@ header a {
         align-items: start;
         position: relative;
     }
+
     .resume_btn {
         position: absolute;
         bottom: 0;
@@ -583,6 +761,7 @@ header a {
         width: auto;
         max-width: fit-content;
     }
+
     /* skills */
     .skills {
         display: flex;
@@ -624,6 +803,21 @@ header a {
         margin-left: auto;
         margin-right: 2rem;
         gap: 2rem;
+    }
+
+    .navbar-nav .nav-link.active {
+        position: relative;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 3px;
+        background-color: var(--bs-secondary-color);
     }
 
     /* banner */
@@ -719,7 +913,7 @@ header a {
 
     .WhatIDo h3,
     .FAQ_container h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 1.92px;
     }
 
@@ -730,7 +924,7 @@ header a {
     }
 
     .featured_works h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .project_item {
@@ -778,16 +972,12 @@ header a {
         padding-right: 1rem;
     }
 
-    .btn_link {
-        margin-top: auto;
-    }
-
     /* FAQ */
     .FAQ_container h4 {
         font-size: 2rem;
     }
 
-    /* works */
+    /* -------- works -------- */
     /* project list */
     .general_list .tag {
         display: flex;
@@ -798,10 +988,31 @@ header a {
     }
 
     .general_list h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 1.92px;
+        color: var(--Dark-Dark-2);
     }
+/* Added project cover hover styles */
+.project_cover_hover {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20rem;
+    transform: translateY(-50%);
+    width: 300px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
+.general_list {
+    position: relative;
+}
+
+.general_list:hover .project_cover_hover {
+    display: block;
+}
     /* ---------- about ----------  */
     .banner_content {
         display: flex;
@@ -809,6 +1020,7 @@ header a {
         align-items: start;
         position: relative;
     }
+
     .resume_btn {
         position: absolute;
         bottom: 0;
@@ -817,6 +1029,7 @@ header a {
         width: auto;
         max-width: fit-content;
     }
+
     /* skills */
     .skills {
         display: flex;
@@ -831,7 +1044,7 @@ header a {
     }
 
     .skills .title img,
-    .design_philosophy img{
+    .design_philosophy img {
         width: 4rem;
     }
 
@@ -858,11 +1071,13 @@ header a {
         border-right: 1px solid var(--bs-border-color);
         border-bottom: none;
     }
-     /* -------- contact -------- */
-     .contact_content {
+
+    /* -------- contact -------- */
+    .contact_content {
         display: flex;
         flex-direction: row;
     }
+
     .contact_content .get_in_touch {
         margin-top: 1rem;
         margin-right: 2rem;
@@ -872,10 +1087,10 @@ header a {
         flex-grow: 1;
         flex-shrink: 1;
     }
+
     .contact_content .say_hello {
         margin-left: 3rem;
         margin-right: 3rem;
         margin-top: 1rem;
     }
 }
-
