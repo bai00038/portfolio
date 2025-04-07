@@ -9,9 +9,9 @@
 
 
 ## Assets & Resources
-**Frameworks:** [Bootstrap](https://getbootstrap.com/)
-**Libraries:**  [Animate.css](https://daneden.github.io/animate.css/)
-**Fonts:** [Browse Fonts - Google Fonts](https://fonts.google.com/)
+* **Frameworks:** [Bootstrap](https://getbootstrap.com/)
+* **Libraries:**  [Animate.css](https://daneden.github.io/animate.css/)
+* **Fonts:** [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
 
 
