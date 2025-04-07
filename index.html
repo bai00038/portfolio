@@ -15,18 +15,28 @@
   <!-- bootstrap css link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- custom css link -->
+    <!-- custom css link -->
   <link rel="stylesheet" href="./css/main.css">
   <title>Home</title>
 </head>
 
 <body>
+  <!-- adding skip links -->
+  <div class="skip_link_container">
+    <ul role="list" class="skip_links">
+      <li><a role="link" href="#navbar">Skip to navbar</a></li>
+      <li><a role="link" href="#main">Skip to main</a></li>
+      <li><a role="link" href="#WhatIDo">Skip to What I Do</a></li>
+      <li><a role="link" href="#featured_works">Skip to Featured Works</a></li>
+      <li><a role="link" href="#FAQ">Skip to the FAQ</a></li>
+    </ul>
+  </div>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-      <div class=" container-fluid">
+    <nav role="navigation" class="navbar navbar-expand-lg bg-body-tertiary border-bottom" id="navbar">
+      <div class="container-fluid">
         <!-- logo -->
         <div class="logo_container ms-2 p-2">
-          <a class="navbar-logo" href="index.html">
+          <a role="link" class="navbar-logo" href="index.html">
             <img src="./images/logo.svg" alt="Logo">
           </a>
         </div>
@@ -34,41 +44,65 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <!-- nav content -->
           <div class="navbar-nav fw-normal">
-            <a class="nav-link active fw-medium" aria-current="page" href="index.html">HOME</a>
-            <a class="nav-link" href="works.html">WORKS</a>
-            <a class="nav-link" href="about.html">ABOUT</a>
-            <a class="nav-link" href="contact.html">CONTACT</a>
+            <a role="link" class="nav-link active fw-medium" aria-current="page" href="index.html">HOME</a>
+            <a role="link" class="nav-link" href="works.html">WORKS</a>
+            <a role="link" class="nav-link" href="about.html">ABOUT</a>
+            <a role="link" class="nav-link" href="contact.html">CONTACT</a>
           </div>
         </div>
         <!-- Hamburger -->
-        <div class="hamburger me-2">
-          <a class="p-2" href="menu.html">
-            <img src="./images/mobile_menu.svg" alt="mobile_menu">
-          </a>
+        <div class="hamburger me-3">
+          <img src="./images/mobile_menu.svg" alt="mobile_menu">
         </div>
+        <!-- mobile menu -->
+        <div role="list" class="mobile_menu">
+          <ul>
+            <li role="listitem" class="border-bottom py-3">
+              <a role="link" class="text-decoration-none text-dark" href="index.html">Home
+                <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+            </li>
+            <li role="listitem" class="border-bottom py-3">
+              <a role="link" class="text-decoration-none text-dark" href="works.html">Works
+                <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+            </li>
+            <li role="listitem" class="border-bottom py-3">
+              <a role="link" class="text-decoration-none text-dark" href="about.html">About
+                <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+            </li>
+            <li role="listitem" class="border-bottom py-3">
+              <a role="link" class="text-decoration-none text-dark" href="contact.html">Contact
+                <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+            </li>
+          </ul>
+          <div class="contact_info my-5">
+            <a role="link" class="btn btn-primary mb-3" href="contact.html">Let's Talk Design!</a>
+            <p class="">bai00038@algonquinlive.com</p>
+          </div>
+        </div>
+
         <!-- content on the right -->
         <div class="header_right_container border-start">
-          <a class="btn btn-primary" href="contact.html">Let's Talk Design!</a>
-          <a class="nav-link px-3" target="_blank" href="https://www.linkedin.com/in/wsbaibing/">
+          <a role="link" class="btn btn-primary" href="contact.html">Let's Talk Design!</a>
+          <a role="link" class="nav-link px-3" target="_blank" href="https://www.linkedin.com/in/wsbaibing/">
             <img src="./images/LinkedIn.svg" alt="LinkedIn">
           </a>
         </div>
+      </div>
     </nav>
-
-
   </header>
-  <main>
+
+  <main role="main" id="main">
     <!-- banner -->
     <div class="banner_container border-bottom">
       <!-- text content of banner -->
       <div class="text_content p-4">
         <!-- headings -->
         <div class="headings">
-          <h1 class="fw-light text-secondary mt-4 mb-4">Hi, I'm Bing Bai.</h1>
+          <h1 role="heading" class="fw-light text-secondary mt-4 mb-4">Hi, I'm Bing Bai.</h1>
           <!-- introduction -->
           <div class="introduction_container">
-            <h2 class="fw-semibold text-secondary">Digital</h2>
-            <h2 class="fw-semibold text-secondary">Designer</h2>
+            <h2 role="heading" class="fw-semibold text-secondary">Digital</h2>
+            <h2 role="heading" class="fw-semibold text-secondary">Designer</h2>
           </div>
         </div>
         <p class="fw-light py-4 description text-secondary">I craft seamless, user-centered designs that not
@@ -80,38 +114,38 @@
       </div>
     </div>
     <!-- What I Do -->
-    <div class="WhatIDo">
+    <div class="WhatIDo" id="WhatIDo">
       <!-- WhatIDo title -->
       <div class="title">
-        <h3 class="fw-light text-start text-secondary text-uppercase">What I Do</h3>
+        <h3 role="heading" class="fw-light text-start text-secondary text-uppercase">What I Do</h3>
         <img src="./images/three_circles.svg" alt="decoration">
       </div>
       <!-- WhatIDo content -->
       <div class="WhatIDo_content">
         <!-- UI/UX -->
         <div class="WhatIDo_item UI_UX">
-          <h3 class="text-start fw-medium text-secondary">UI/UX Design</h3>
+          <h3 role="heading" class="text-start fw-medium text-secondary">UI/UX Design</h3>
           <p class="text-start pt-2 pb-2 pe-2">Crafting seamless and user-centric digital experiences.</p>
         </div>
         <!-- Interaction Design -->
         <div class="WhatIDo_item Interaction">
-          <h3 class="text-start fw-medium text-secondary">Interaction Design</h3>
+          <h3 role="heading" class="text-start fw-medium text-secondary">Interaction Design</h3>
           <p class="text-start pt-2 pb-2 pe-2">Designing intuitive interactions that enhance user engagement.</p>
         </div>
         <!-- Web Development -->
         <div class="WhatIDo_item Web">
-          <h3 class="text-start fw-medium text-secondary">Web Development</h3>
+          <h3 role="heading" class="text-start fw-medium text-secondary">Web Development</h3>
           <p class="text-start pt-2 pb-2 pe-2">Turning designs into fully functional, responsive websites.</p>
         </div>
       </div>
     </div>
     <!-- featured works -->
-    <div class="featured_works ms-3">
+    <div class="featured_works ms-3" id="featured_works">
       <!-- featured works title -->
       <div class="title mt-4">
-        <h3 class="fw-light text-start text-secondary text-uppercase">Featured Works</h3>
+        <h3 role="heading" class="fw-light text-start text-secondary text-uppercase">Featured Works</h3>
         <div class="btn_link pt-2 pb-4">
-          <a class="text-secondary me-1" href="works.html">View all
+          <a role="link" class="text-secondary me-1" href="works.html">View all
             <img src="./images/arrow-upright.svg" alt="arrow-upright"></a>
         </div>
       </div>
@@ -123,7 +157,7 @@
             <img class="project_cover " src="./images/project-1.png" alt="01. teaching software">
           </div>
           <div class="text_content">
-            <h3 class="mt-4 mb-3">01. Teaching Software</h3>
+            <h3 role="heading" class="mt-4 mb-3">01. Teaching Software</h3>
             <p class="mb-4">Designed the UI/UX for Honghe PiG, an AI-powered teaching tool tailored for educators.
               Designed the UI/UX for Honghe PiG, an AI-powered teaching tool tailored for educators.</p>
             <div class="tag">
@@ -133,7 +167,7 @@
               <span class="tag_item">Web Development</span>
             </div>
             <div class="btn_link pt-3 pb-2">
-              <a class="text-secondary" href="./project-1">View Project
+              <a role="link" class="text-secondary" href="coming_soon.html">View Project
                 <img src="./images/arrow-upright.svg" alt="arrow-upright"></a>
             </div>
           </div>
@@ -144,7 +178,7 @@
             <img class="project_cover " src="./images/project-2.png" alt="01. teaching software">
           </div>
           <div class="text_content">
-            <h3 class="mt-4 mb-3">02. Honghe Xinban</h3>
+            <h3 role="heading" class="mt-4 mb-3">02. Honghe Xinban</h3>
             <p class="mb-4">A rebranding project focused on modernizing the identity of Honghe Xinban. A rebranding
               project focused on modernizing the identity of Honghe Xinban.</p>
             <div class="tag">
@@ -154,7 +188,7 @@
               <span class="tag_item">Android</span>
             </div>
             <div class="btn_link pt-3 pb-2">
-              <a class="text-secondary" href="./project-1">View Project
+              <a role="link" class="text-secondary" href="coming_soon.html">View Project
                 <img src="./images/arrow-upright.svg" alt="arrow-upright"></a>
             </div>
           </div>
@@ -162,17 +196,20 @@
       </div>
     </div>
     <!-- FAQ -->
-    <div class="FAQ_container text-center border-top">
+    <div class="FAQ_container text-center border-top" id="FAQ">
       <!-- FAQ title -->
       <div class="title border-bottom pt-4">
-        <h3 class="fw-light text-start text-secondary ms-3">FAQ</h3>
-        <img class="decoration_img ms-3 py-3" src="./images/three_circles.svg" alt="decoration">
+        <h3 role="heading" class="fw-light text-start text-secondary ms-3">FAQ</h3>
+        <div class="btn_link pt-2 pb-4">
+          <a role="link" class="text-secondary me-1 ps-3" href="contact.html">Get in Touch
+            <img src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+        </div>
       </div>
       <!-- Question List -->
       <div class="border-bottom ms-3">
         <!-- question 1 -->
         <div class="general_list border-bottom pb-2 pt-3 pe-2">
-          <h4 class="text-start fw-medium text-secondary">How do you approach a new design project?</h4>
+          <h4 role="heading" class="text-start fw-medium text-secondary">How do you approach a new design project?</h4>
           <img src="./images/arrow-up.svg" alt="arrow-up">
         </div>
         <p class="pt-3 text-start">As a Web Designer, I create custom web designs that capture your brand's identity
@@ -182,47 +219,50 @@
       <!-- question 2 -->
       <div class="border-bottom ms-3">
         <div class="general_list border-bottom pb-2 pt-3 pe-2">
-          <h4 class="text-start fw-medium text-secondary-emphasis">What tools do you use?</h4>
+          <h4 role="heading" class="text-start fw-medium text-secondary-emphasis">What tools do you use?</h4>
           <img class="pt-1 ps-2" src="./images/arrow-up.svg" alt="arrow-up">
         </div>
-        <p class="pt-3 text-start">I use Figma for UI/UX design and prototyping, along with Illustrator and Photoshop for visuals. For front-end work, I code with HTML, CSS, and CMS.</p>
+        <p class="pt-3 text-start">I use Figma for UI/UX design and prototyping, along with Illustrator and Photoshop
+          for visuals. For front-end work, I code with HTML, CSS, and CMS.</p>
       </div>
 
       <!-- question 3 -->
       <div class="border-bottom ms-3">
-      <div class="general_list border-bottom pb-2 pt-3 pe-2">
-        <h4 class="text-start fw-medium text-secondary-emphasis">What industries have you worked with?</h4>
-        <img class="pt-1 ps-2" src="./images/arrow-up.svg" alt="arrow-up">
+        <div class="general_list border-bottom pb-2 pt-3 pe-2">
+          <h4 role="heading" class="text-start fw-medium text-secondary-emphasis">What industries have you worked with?
+          </h4>
+          <img class="pt-1 ps-2" src="./images/arrow-up.svg" alt="arrow-up">
+        </div>
+        <p class="pt-3 text-start">I started in architecture, designing digital content for industrial parks. Now I
+          focus on education and creative tech, working on school tools and portfolio-based design projects.</p>
       </div>
-      <p class="pt-3 text-start">I started in architecture, designing digital content for industrial parks. Now I focus on education and creative tech, working on school tools and portfolio-based design projects.</p>
-    </div>
     </div>
   </main>
   <!-- footer -->
   <footer>
     <div class="footer_container border-secondary border-top mt-5">
       <div class="social_media mt-5">
-        <a href="https://www.behance.net/" target="_blank">
+        <a role="link" href="https://www.behance.net/" target="_blank">
           <img src="./images/footer_behance.svg" alt="behance">
         </a>
-        <a href="https://www.linkedin.com/in/wsbaibing/" target="_blank">
+        <a role="link" href="https://www.linkedin.com/in/wsbaibing/" target="_blank">
           <img src="./images/footer_linkedin.svg" alt="linkedIn">
         </a>
-        <a href="https://dribbble.com/Ivy_Bai" target="_blank">
+        <a role="link" href="https://dribbble.com/Ivy_Bai" target="_blank">
           <img src="./images/footer_dribbble.svg" alt="dribbble">
         </a>
       </div>
-      <div class="fs-6 footer_nav mt-4">
-        <a class="text-secondary-emphasis text-decoration-underline" href="#">Home</a>
-        <a class="text-secondary-emphasis text-decoration-underline" href="#">Works</a>
-        <a class="text-secondary-emphasis text-decoration-underline" href="#">About</a>
-        <a class="text-secondary-emphasis text-decoration-underline" href="#">Contact</a>
+      <div role="navigation" class="fs-6 footer_nav mt-4">
+        <a role="link" class="text-secondary-emphasis text-decoration-underline" href="index.html">Home</a>
+        <a role="link" class="text-secondary-emphasis text-decoration-underline" href="works.html">Works</a>
+        <a role="link" class="text-secondary-emphasis text-decoration-underline" href="about.html">About</a>
+        <a role="link" class="text-secondary-emphasis text-decoration-underline" href="contact.html">Contact</a>
       </div>
       <div class="copyright mt-4">
         <span>&copy; 2025 Bing Bai. All rights reserved.</span>
       </div>
       <div class="email_address mb-5">
-        <a class="text-secondary-emphasis" href="gmail.com">emailaddress@algonquinlive.com</a>
+        <a role="link" class="text-secondary-emphasis" href="gmail.com">emailaddress@algonquinlive.com</a>
       </div>
     </div>
   </footer>
@@ -230,6 +270,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

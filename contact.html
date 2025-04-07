@@ -21,90 +21,134 @@
 </head>
 
 <body>
+    <!-- adding skip links -->
+    <div class="skip_link_container">
+        <ul role="list" class="skip_links">
+            <li><a role="link" href="#main">Skip to main</a></li>
+            <li><a role="link" href="#get_in_touch">Skip to get in touch</a></li>
+            <li><a role="link" href="#say_hello">Skip to say hello</a></li>
+        </ul>
+    </div>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-            <div class=" container-fluid">
-                <!-- logo -->
-                <div class="logo_container ms-2 p-2">
-                    <a class="navbar-logo" href="index.html">
-                        <img src="./images/logo.svg" alt="Logo">
-                    </a>
-                </div>
-                <!-- nav list -->
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <!-- nav content -->
-                    <div class="navbar-nav fw-normal">
-                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
-                        <a class="nav-link" href="works.html">WORKS</a>
-                        <a class="nav-link" href="about.html">ABOUT</a>
-                        <a class="nav-link active fw-medium" href="contact.html">CONTACT</a>
-                    </div>
-                </div>
-                <!-- Hamburger -->
-                <div class="hamburger me-2">
-                    <a class="p-2" href="menu.html">
-                        <img src="./images/mobile_menu.svg" alt="mobile_menu">
-                    </a>
-                </div>
-                <!-- content on the right -->
-        <div class="header_right_container border-start">
-            <a class="btn btn-primary" href="contact.html">Let's Talk Design!</a>
-            <a class="nav-link px-3" target="_blank" href="https://www.linkedin.com/in/wsbaibing/">
-              <img src="./images/LinkedIn.svg" alt="LinkedIn">
-            </a>
+        <nav role="navigation" class="navbar navbar-expand-lg bg-body-tertiary border-bottom" id="navbar">
+          <div class="container-fluid">
+            <!-- logo -->
+            <div class="logo_container ms-2 p-2">
+              <a role="link" class="navbar-logo" href="index.html">
+                <img src="./images/logo.svg" alt="Logo">
+              </a>
+            </div>
+            <!-- nav list -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <!-- nav content -->
+              <div class="navbar-nav fw-normal">
+                <a role="link" class="nav-link" aria-current="page" href="index.html">HOME</a>
+                <a role="link" class="nav-link" href="works.html">WORKS</a>
+                <a role="link" class="nav-link" href="about.html">ABOUT</a>
+                <a role="link" class="nav-link active fw-medium" href="contact.html">CONTACT</a>
+              </div>
+            </div>
+            <!-- Hamburger -->
+            <div class="hamburger me-3">
+              <img src="./images/mobile_menu.svg" alt="mobile_menu">
+            </div>
+            <!-- mobile menu -->
+            <div role="list" class="mobile_menu">
+              <ul>
+                <li role="listitem" class="border-bottom py-3">
+                  <a role="link" class="text-decoration-none text-dark" href="index.html">Home
+                    <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+                </li>
+                <li role="listitem" class="border-bottom py-3">
+                  <a role="link" class="text-decoration-none text-dark" href="works.html">Works
+                    <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+                </li>
+                <li role="listitem" class="border-bottom py-3">
+                  <a role="link" class="text-decoration-none text-dark" href="about.html">About
+                    <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+                </li>
+                <li role="listitem" class="border-bottom py-3">
+                  <a role="link" class="text-decoration-none text-dark" href="contact.html">Contact
+                    <img class="pe-4" src="./images/arrow-upright.svg" alt="arrow-upright"></a>
+                </li>
+              </ul>
+              <div class="contact_info my-5">
+                <a role="link" class="btn btn-primary mb-3" href="contact.html">Let's Talk Design!</a>
+                <p class="">bai00038@algonquinlive.com</p>
+              </div>
+            </div>
+    
+            <!-- content on the right -->
+            <div class="header_right_container border-start">
+              <a role="link" class="btn btn-primary" href="contact.html">Let's Talk Design!</a>
+              <a role="link" class="nav-link px-3" target="_blank" href="https://www.linkedin.com/in/wsbaibing/">
+                <img src="./images/LinkedIn.svg" alt="LinkedIn">
+              </a>
+            </div>
           </div>
         </nav>
-    </header>
-    <main>
+      </header>
+    <main role="main" id="main">
         <!-- contact banner -->
         <div class="banner border-bottom">
             <div class="banner_content ms-4">
-                <h1 class="fw-light text-secondary mt-5 mb-4 lh-base">Excited to Collaborate? Let's Talk!_</h1>
+                <h1 role="heading" class="fw-light text-secondary mt-5 mb-4 lh-base">Excited to Collaborate? Let's
+                    Talk!_</h1>
             </div>
             <img class="pb-4 ms-4" src="./images/three_circles_2.svg" alt="decoration">
         </div>
         <!-- contact content -->
         <div class="contact_content">
             <!-- get in touch -->
-            <div class="get_in_touch py-5">
-                <h2 class="mb-5 fw-normal text-capitalize">Get in touch</h2>
-                <div class="mb-5">
-                    <p class="fw-light mb-4 text-secondary">Email</p>
+            <div class="get_in_touch py-5" id="get_in_touch">
+                <h2 role="heading" class="mb-5 fw-normal text-capitalize">Get in touch</h2>
+                <div class="mb-5" itemscope itemtype="https://schema.org/Person">
+                    <p class="fw-light mb-4 text-secondary" itemprop="email">Email</p>
                     <p class="fw-normal">bai00038@algonquinlive.com</p>
                 </div>
                 <div class="message_linkedIn mt-4">
                     <p class="fw-light mb-4 text-secondary text-capitalize">Message me on</p>
-                    <a class="btn btn-primary py-2" target="_blank" href="https://www.linkedin.com/in/wsbaibing/">LinkedIn</a>
+                    <a role="link" class="btn btn-primary py-2" target="_blank"
+                        href="https://www.linkedin.com/in/wsbaibing/">LinkedIn</a>
                 </div>
             </div>
             <!-- say hello -->
-            <div class="say_hello py-5">
+            <div class="say_hello py-5" id="say_hello">
                 <!-- title -->
-                <h2 class="mb-5 fw-normal text-capitalize">say hello</h2>
+                <h2 role="heading" class="mb-5 fw-normal text-capitalize">say hello</h2>
                 <!-- form content -->
                 <form class="form me-4">
                     <!-- name -->
                     <div class="row mb-5">
                         <div class="col me-2">
-                            <label for="fname" class="form-label text-capitalize fw-light mb-4 text-secondary">first name</label>
-                          <input type="text" class="form-control" placeholder="Your First name" aria-label="First name" id="fname">
+                            <label for="fname" class="form-label text-capitalize fw-light mb-4 text-secondary">first
+                                name</label>
+                            <input type="text" class="form-control" placeholder="Your First name"
+                                aria-label="First name" id="fname">
                         </div>
                         <div class="col ms-2">
-                            <label for="lname" class="form-label text-capitalize fw-light mb-4 text-secondary">last name</label>
-                          <input type="text" class="form-control" placeholder="Your Last name" aria-label="Last name" id="lname">
+                            <label for="lname" class="form-label text-capitalize fw-light mb-4 text-secondary">last
+                                name</label>
+                            <input type="text" class="form-control" placeholder="Your Last name" aria-label="Last name"
+                                id="lname">
                         </div>
-                      </div>
+                    </div>
                     <!-- email -->
                     <div class="mb-5">
-                            <label for="exampleInputEmail1" class="form-label fw-light mb-4 text-secondary text-capitalize">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email so I can reach you">
+                        <label for="exampleInputEmail1"
+                            class="form-label fw-light mb-4 text-secondary text-capitalize">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                            placeholder="Your email so I can reach you">
                     </div>
                     <!-- message -->
                     <div class="message">
-                            <label for="message" class="form-label fw-light mb- text-secondary text-capitalize">message</label>
-                            <textarea class="form-control" placeholder="Tell me about your project, idea, or just say hi!" id="message" style="height: 100px"></textarea>
+                        <label for="message"
+                            class="form-label fw-light mb- text-secondary text-capitalize">message</label>
+                        <textarea class="form-control" placeholder="Tell me about your project, idea, or just say hi!"
+                            id="message" style="height: 100px"></textarea>
                     </div>
-                    <a type="button" class="btn btn-outline-secondary py-2 mt-5 px-4 text-capitalize" href="thanks.com">send message</a>
+                    <a class="send_message border-secondary btn py-2 mt-5 px-4 text-capitalize" href="thanks.com">send
+                        message</a>
                 </form>
             </div>
         </div>
@@ -114,27 +158,27 @@
     <footer>
         <div class="footer_container border-top border-secondary mt-5">
             <div class="social_media mt-5">
-                <a href="behance.com">
+                <a role="link" href="behance.com">
                     <img src="./images/footer_behance.svg" alt="behance">
                 </a>
-                <a href="linkedin.com">
+                <a role="link" href="linkedin.com">
                     <img src="./images/footer_linkedin.svg" alt="linkedIn">
                 </a>
-                <a href="dribbble.com">
+                <a role="link" href="dribbble.com">
                     <img src="./images/footer_dribbble.svg" alt="dribbble">
                 </a>
             </div>
-            <div class="fs-6 footer_nav mt-4">
-                <a class="text-secondary-emphasis text-decoration-underline" href="#">Home</a>
-                <a class="text-secondary-emphasis text-decoration-underline" href="#">Works</a>
-                <a class="text-secondary-emphasis text-decoration-underline" href="#">About</a>
-                <a class="text-secondary-emphasis text-decoration-underline" href="#">Contact</a>
+            <div role="navigation" class="fs-6 footer_nav mt-4">
+                <a role="link" class="text-secondary-emphasis text-decoration-underline" href="index.html">Home</a>
+                <a role="link" class="text-secondary-emphasis text-decoration-underline" href="works.html">Works</a>
+                <a role="link" class="text-secondary-emphasis text-decoration-underline" href="about.html">About</a>
+                <a role="link" class="text-secondary-emphasis text-decoration-underline" href="contact.html">Contact</a>
             </div>
             <div class="copyright mt-4">
                 <span>&copy; 2025 Bing Bai. All rights reserved.</span>
             </div>
             <div class="email_address mb-5">
-                <a class="text-secondary-emphasis" href="gmail.com">emailaddress@algonquinlive.com</a>
+                <a role="link" class="text-secondary-emphasis" href="gmail.com">emailaddress@algonquinlive.com</a>
             </div>
         </div>
     </footer>
@@ -142,7 +186,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
-</body>
