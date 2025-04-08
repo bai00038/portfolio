@@ -30,6 +30,6 @@
 * **Fonts:** [Browse Fonts - Google Fonts](https://fonts.google.com/)
 
 
-
+---
 
 **Figma Link:** https://www.figma.com/design/HbFVCKleLNP2awugqD9ZIM/Hi-Fi-Wireframes---Template?node-id=0-1&t=qoJeSV2kw1GQD3Yx-1
