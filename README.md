@@ -1,6 +1,6 @@
 # portfolio
 
-What challenges I faced during development and how I overcame those changes?
+## What challenges I faced during development and how I overcame those changes?
 1. **Unfamiliarity with Bootstrap Components**
    At first, I wasn't familiar with how to effectively use Bootstrap's built-in components.
    **Solution**: I explored the [Bootstrap documentation](https://getbootstrap.com) and made it a habit to search for relevant components before writing HTML. This helped me apply Bootstrap's utilities more efficiently.
