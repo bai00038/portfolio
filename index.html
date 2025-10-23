@@ -12,10 +12,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gilda+Display&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Titan+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display&family=Gilda+Display&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+SC:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Titan+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
   <!-- bootstrap css link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- custom css link -->
+  <!-- custom css link -->
   <link rel="stylesheet" href="./css/main.css">
   <title>Home</title>
 </head>
@@ -94,24 +98,24 @@
   <main role="main" id="main">
     <!-- banner -->
     <div class="banner_container border-bottom">
-      <!-- text content of banner -->
-      <div class="text_content p-4">
-        <!-- headings -->
-        <div class="headings">
-          <h1 role="heading" class="fw-light text-secondary mt-4 mb-4">Hi, I'm Bing Bai.</h1>
-          <!-- introduction -->
-          <div class="introduction_container">
-            <h2 role="heading" class="fw-semibold text-secondary">Digital</h2>
-            <h2 role="heading" class="fw-semibold text-secondary">Designer</h2>
-          </div>
-        </div>
-        <p class="fw-light py-4 description text-secondary">I craft seamless, user-centered designs that not
-          only look great but feel intuitive. Let's bring ideas to life - one pixel at a time.</p>
+      <!-- hero text -->
+      <div class="hero_text pt-5">
+        <h1 role="hero_text" class="hero-name pt-4">Hi, I'm Bing Bai,</h1>
+        <h2 class="hero-title name-accent">Digital Designer.</h2>
       </div>
-      <!-- motion icon -->
+      <!-- hero image -->
+      <div class="hero_image" aria-hidden="true">
+        <img src="./images/portrait_desktop.png" alt="Portrait of Bing Bai" loading="eager">
+      </div>
+      <!-- call to action buttons -->
+      <div class="CTA my-5" aria-label="hero CTA">
+        <a role="link" class="btn btn-primary" href="works.html">Portfolio</a>
+        <a role="link" class="btn btn-outline-dark ms-3" href="contact.html">Hire Me</a>
+      </div>
+      <!-- motion icon
       <div class="arrow_container">
         <img src="./images/arrow-down.svg" alt="motion_arrow">
-      </div>
+      </div> -->
     </div>
     <!-- What I Do -->
     <div class="WhatIDo" id="WhatIDo">
