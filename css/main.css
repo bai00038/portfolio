@@ -144,7 +144,7 @@ main {
   .hero_image img{ 
     width: 68vw; 
     max-width: 420px;
-     height: auto; 
+    height: auto; 
     }
 
   /* CTA below portrait with translucent pill background */
@@ -291,7 +291,8 @@ header {
 }
 
 header a {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
+    
 }
 
 /* hamburger */
