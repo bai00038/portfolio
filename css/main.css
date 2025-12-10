@@ -120,48 +120,61 @@ main {
 
 /* --- Hero: mobile & small tablets only (do not change desktop defaults) --- */
 @media screen and (max-width: 991.98px) {
-  .banner_container{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: auto;
-    padding: 6rem 1rem 2rem;
-  }
-  .hero-name{ 
-    font-weight: 300;
- }
-
-  /* Portrait sits in normal flow on mobile */
-  .hero_image{ 
-    position: relative; 
-    top: auto; 
-    left: auto; 
-    transform: none; 
-    margin: 1rem auto 0; 
-}
-  .hero_image img{ 
-    width: 68vw; 
-    max-width: 420px;
-    height: auto; 
+    .banner_container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        padding: 6rem 1rem 2rem;
     }
 
-  /* CTA below portrait with translucent pill background */
-  .banner_container .CTA{
-    position: static;           /* remove absolute positioning on mobile */
-    transform: none;
-    margin: 1.25rem auto 0;
-    z-index: 3;
-    display: flex; justify-content: center; align-items: center; gap: 1rem;
-    background: rgba(255,255,255,.65);
-    padding: .6rem .9rem;
-    border-radius: 2.25rem;
-    border: 1px solid rgba(255,255,255,.8);
-    box-shadow: 0 18px 40px rgba(0,0,0,.18);
-    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  }
-  .banner_container .CTA .btn{ padding: .8rem 1.4rem; border-radius: 2rem; font-weight: 500; box-shadow: 0 8px 22px rgba(0,0,0,.16); }
+    .hero-name {
+        font-weight: 300;
+    }
+
+    /* Portrait sits in normal flow on mobile */
+    .hero_image {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 1rem auto 0;
+    }
+
+    .hero_image img {
+        width: 68vw;
+        max-width: 420px;
+        height: auto;
+    }
+
+    /* CTA below portrait with translucent pill background */
+    .banner_container .CTA {
+        position: static;
+        /* remove absolute positioning on mobile */
+        transform: none;
+        margin: 1.25rem auto 0;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(255, 255, 255, .65);
+        padding: .6rem .9rem;
+        border-radius: 2.25rem;
+        border: 1px solid rgba(255, 255, 255, .8);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .banner_container .CTA .btn {
+        padding: .8rem 1.4rem;
+        border-radius: 2rem;
+        font-weight: 500;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, .16);
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width:768px) {
@@ -270,10 +283,10 @@ h5 {
 }
 
 /* Fluid hero title sizing for all screens */
-.hero-title{
+.hero-title {
     color: var(--Dark-Dark-1, #363636);
     text-align: center;
-    font-family:  "Archivo Black", sans-serif;
+    font-family: "Archivo Black", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.08;
@@ -287,12 +300,12 @@ header {
     position: fixed;
     width: 100%;
     background-color: var(--General-Background);
-    z-index: 2;
+    z-index: 10;
 }
 
 header a {
     font-family: "Roboto", sans-serif;
-    
+
 }
 
 /* hamburger */
@@ -1113,7 +1126,7 @@ header a {
         font-weight: 300;
     }
 
-    .hero-title{
+    .hero-title {
         color: var(--Dark-Dark-1, #363636);
         text-align: center;
         font-family: "Archivo Black", sans-serif;
@@ -1139,34 +1152,35 @@ header a {
         height: auto;
     }
 
-/* hero CTA buttons */
-.banner_container .CTA {
-    position: absolute;
-    top: 83%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;                       /* above portrait */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0;
+    /* hero CTA buttons */
+    .banner_container .CTA {
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
 
-    /* translucent white pill background */
-    background: rgba(255, 255, 255, 0.65);
-    padding: 0.6rem .9rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(255,255,255,0.8);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-.banner_container .CTA .btn{
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 300;
-    box-shadow: 0 8px 22px rgba(0,0,0,.16);
-}
+        /* translucent white pill background */
+        background: rgba(255, 255, 255, 0.65);
+        padding: 0.6rem .9rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .banner_container .CTA .btn {
+        padding: 0.6rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 300;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, .16);
+    }
 
     /* what I do */
     .WhatIDo h3 {
@@ -1174,6 +1188,7 @@ header a {
         font-size: 3rem;
         letter-spacing: 3.84px;
     }
+
     .WhatIDo {
         padding-top: 1rem;
         display: flex;
@@ -1415,4 +1430,3 @@ header a {
         margin-top: 1rem;
     }
 }
-
